@@ -22,11 +22,24 @@ namespace LibraryManagementApp.Controllers
         }
 
         // GET: Books
-        public async Task<IActionResult> Index()
+        //public async Task<IActionResult> Index()
+        //{
+        //      return View(await _context.Book.ToListAsync());
+        //}
+        public async Task<IActionResult> Index(string bookSearch)
         {
-              return View(await _context.Book.ToListAsync());
-        }
+            ViewData["GetBooks"] = bookSearch;
 
+            var bookQuery = from x in _context.Book select x;
+            if(!String.IsNullOrEmpty(bookSearch))
+            {
+                bookQuery = bookQuery.Where(x => x.BookName.Contains(bookSearch) || x.Author.Contains(bookSearch));  
+            }
+            bookQuery = bookQuery.OrderBy(x => x.BookName);
+
+            return View(await bookQuery.ToListAsync());
+            // return View(await _context.Book.ToListAsync());
+        }
         // GET: Books/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -62,6 +75,7 @@ namespace LibraryManagementApp.Controllers
             {
                 _context.Add(book);
                 await _context.SaveChangesAsync();
+                TempData["Success"] = "Book Added Successfully";
                 return RedirectToAction(nameof(Index));
             }
             return View(book);
@@ -101,6 +115,7 @@ namespace LibraryManagementApp.Controllers
                 {
                     _context.Update(book);
                     await _context.SaveChangesAsync();
+                    TempData["Success"] = "Book Updated Successfully";
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -149,6 +164,7 @@ namespace LibraryManagementApp.Controllers
             if (book != null)
             {
                 _context.Book.Remove(book);
+                TempData["Error"] = "Book Deleted Successfully";
             }
             
             await _context.SaveChangesAsync();

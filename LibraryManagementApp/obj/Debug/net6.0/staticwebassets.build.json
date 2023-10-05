@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7KBtZegqsUbUMUA+YICOD1rqOAyi4XrOprk2udMJilY=",
+  "Hash": "tQ/FhNVtVB1cHjZWynFPVEqnI0Wacy7iDLQkoaeZEgU=",
   "Source": "LibraryManagementApp",
   "BasePath": "_content/LibraryManagementApp",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\.Net programms\\LibraryManagementApp\\LibraryManagementApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\LibraryManagementApp.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\.Net programms\\LibraryManagementApp\\LibraryManagementApp\\wwwroot\\css\\BootsWatchTheam.css",
+      "SourceId": "LibraryManagementApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\.Net programms\\LibraryManagementApp\\LibraryManagementApp\\wwwroot\\",
+      "BasePath": "_content/LibraryManagementApp",
+      "RelativePath": "css/BootsWatchTheam.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\BootsWatchTheam.css"
     },
     {
       "Identity": "C:\\.Net programms\\LibraryManagementApp\\LibraryManagementApp\\wwwroot\\css\\site.css",

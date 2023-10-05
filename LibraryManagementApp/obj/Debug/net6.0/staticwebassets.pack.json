@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\HomeImage.jpg"
     },
     {
+      "Id": "C:\\.Net programms\\LibraryManagementApp\\LibraryManagementApp\\wwwroot\\css\\BootsWatchTheam.css",
+      "PackagePath": "staticwebassets\\css\\BootsWatchTheam.css"
+    },
+    {
       "Id": "C:\\.Net programms\\LibraryManagementApp\\LibraryManagementApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
